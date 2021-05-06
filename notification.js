@@ -46,9 +46,10 @@ const message = JSON.stringify({
 });
 
 const options = {
-    hostname: webhookUrl.host,
+    hostname: webhookUrl.host.replace('hooks', 'api'),
     path: webhookUrl.path,
     method: 'POST',
+    followAllRedirects: true,
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': message.length,

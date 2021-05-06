@@ -58,6 +58,7 @@ const options = {
 const req = https.request(options,
     (res) => {
         console.log(`Status ${res.statusCode}: Notification sent`);
+        console.log(res);
 
         res.on('data', (data) => {
             process.stdout.write(data);

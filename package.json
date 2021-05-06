@@ -1,0 +1,15 @@
+{
+  "name": "@salesforce/pr-notification-action",
+  "version": "1.0.0",
+  "description": "Github action that notifies a webhook URL about PR events.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salesforcecli/pr-notification-action.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salesforcecli/pr-notification-action/issues"
+  },
+  "homepage": "https://github.com/salesforcecli/pr-notification-action#readme"
+}

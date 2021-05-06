@@ -65,5 +65,9 @@ const req = https.request(options,
     }
 );
 
+req.on('error', (error) => {
+    console.log(error);
+})
+
 req.write(message);
 req.end();

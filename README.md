@@ -26,6 +26,9 @@ jobs:
         WEBHOOK_URL : ${{ secrets.SLACK_WEBHOOK_URL }}
         PULL_REQUEST_AUTHOR_ICON_URL : ${{ github.event.pull_request.user.avatar_url }}
         PULL_REQUEST_AUTHOR_NAME : ${{ github.event.pull_request.user.login }}
+        PULL_REQUEST_AUTHOR_PROFILE_URL: ${{ github.event.pull_request.user.html_url }}
+        PULL_REQUEST_BASE_BRANCH_NAME : ${{ github.event.pull_request.base.ref }}
+        PULL_REQUEST_COMPARE_BRANCH_NAME : ${{ github.event.pull_request.head.ref }}
         PULL_REQUEST_NUMBER : ${{ github.event.pull_request.number }}
         PULL_REQUEST_REPO: ${{ github.event.pull_request.head.repo.name }}
         PULL_REQUEST_TITLE : ${{ github.event.pull_request.title }}
@@ -39,3 +42,5 @@ Set this as a repository or organization secret on Github. You will get the valu
 
 #### PULL_REQUEST_*
 These are pulled straight from [Github's API documentation](https://developer.github.com/v3/pulls/).
+
+# Testing

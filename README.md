@@ -4,7 +4,7 @@ A github action to notify a webhook about Pull Request events.
 Mainly used to notify Slack when Pull Requests are opened.
 
 ## Example
-You can see an example in this very repo at [`notify-on-pr-open.yaml`](.github/workflows/notify-on-pr-open.yaml)
+You can see an example in this very repo at [`notify-on-pr-open.yaml`](.github/workflows/notify-on-pr-open.yml)
 
 ## Usage
 Add the following yaml to your github actions workflows folder.

@@ -46,7 +46,7 @@ const message = JSON.stringify({
 });
 
 const options = {
-    hostname: webhookUrl.host.replace('hooks', 'api'),
+    hostname: webhookUrl.host,
     path: webhookUrl.path,
     method: 'POST',
     followAllRedirects: true,
@@ -59,7 +59,7 @@ const options = {
 const req = https.request(options,
     (res) => {
         console.log(`Status ${res.statusCode}: Notification sent`);
-        console.log(res);
+        console.log(res.headers);
 
         res.on('data', (data) => {
             process.stdout.write(data);

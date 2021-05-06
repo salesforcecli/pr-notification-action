@@ -77,7 +77,7 @@ if (authorName !== 'SF-CLI-BOT') {
         method: 'post',
         body: JSON.stringify(message),
         headers: {'Content-Type': 'application/json'}
-    })
+    }).then(res => console.log(res));
 }
 
-console.log(message);
+console.log(JSON.stringify(message, null, 4));

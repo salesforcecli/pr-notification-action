@@ -42,5 +42,3 @@ Set this as a repository or organization secret on Github. You will get the valu
 
 #### PULL_REQUEST_*
 These are pulled straight from [Github's API documentation](https://developer.github.com/v3/pulls/).
-
-# Testing

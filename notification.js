@@ -24,16 +24,16 @@ const message = {
             ]
         },
         {
-			"type": "divider"
-		},
-        {   
+            "type": "divider"
+        },
+        {
             type: 'section',
             text: {
                 type: 'plain_text',
                 text: PRRepo
             }
         },
-        {   
+        {
             type: 'context',
             elements: [
                 {
@@ -41,17 +41,17 @@ const message = {
                     text: baseBranchName
                 },
                 {
-					"type": "plain_text",
-					"text": ":arrow_left:",
-					"emoji": true
-				},
+                    "type": "plain_text",
+                    "text": ":arrow_left:",
+                    "emoji": true
+                },
                 {
                     type: 'plain_text',
                     text: compareBranchName
                 }
             ]
         },
-        {   
+        {
             type: 'context',
             elements: [
                 {
@@ -72,11 +72,11 @@ const message = {
     ]
 };
 
-if (authorName !== 'SF-CLI-BOT') {
+if (authorName !== 'SF-CLI-BOT' && authorName !== 'dependabot[bot]') {
     fetch(webhookUrl, {
         method: 'post',
         body: JSON.stringify(message),
-        headers: {'Content-Type': 'application/json'}
+        headers: { 'Content-Type': 'application/json' }
     }).then(res => console.log(res));
 }
 

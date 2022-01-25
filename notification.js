@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+const fetch = async (...args) => await import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 const authorIconUrl = process.env.PULL_REQUEST_AUTHOR_ICON_URL;
 const authorName = process.env.PULL_REQUEST_AUTHOR_NAME;
